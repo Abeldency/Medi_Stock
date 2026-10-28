@@ -1,0 +1,18 @@
+MEDISTOCK UPDATED SOURCE — SAFE UPDATE GUIDE
+
+1. Stop both running terminals with Ctrl+C.
+2. Keep a backup of your current Pharmacy_Management_System folder.
+3. Extract this ZIP into the parent folder that contains your current Pharmacy_Management_System folder. When Windows asks, merge folders and replace the matching source files.
+4. IMPORTANT: Do not delete or replace your existing backend/.env file. The ZIP does not include it. Keep your existing node_modules folders too.
+5. In VS Code, reopen the project folder and check backend/.env still contains your local MongoDB URI, for example:
+   PORT=5000
+   MONGODB_URI=mongodb://127.0.0.1:27017/medistock
+6. In the backend terminal run: npm install
+7. In a second terminal, open frontend and run: npm install
+8. Start backend with: npm run dev
+9. Start frontend in the second terminal with: npm run dev
+10. Open the Vite URL shown, usually http://localhost:5173.
+
+If Windows extraction does not offer to merge/replace, extract to a temporary folder first, then copy the frontend and backend folders into the existing project folder and choose Replace files. Do not copy node_modules from the ZIP (none are included), and do not overwrite backend/.env.
+
+The database remains in MongoDB. The source update does not delete your existing medicine records.
